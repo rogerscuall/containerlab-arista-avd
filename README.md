@@ -6,7 +6,7 @@ This repo has a setup to use [Containerlab](https://containerlab.dev/) and Arist
 
 ## Requirements
 
-* Containerlab [Containerlab Installation](https://containerlab.dev/install/)
+* Containerlab => [Containerlab Installation](https://containerlab.dev/install/)
 
 ## How to use
 

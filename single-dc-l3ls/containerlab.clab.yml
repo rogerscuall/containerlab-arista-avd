@@ -1,0 +1,72 @@
+name: avd3
+
+topology:
+  kinds:
+    ceos:
+      startup-config: basic-config.txt
+  nodes:
+    dc1-spine1:
+      kind: ceos
+      image: ceos:4.28.7M
+      mgmt-ipv4: 172.20.20.101
+      binds:
+        - intf-mapping.json:/mnt/flash/EosIntfMapping.json:ro
+    dc1-spine2:
+      kind: ceos
+      image: ceos:4.28.7M
+      mgmt-ipv4: 172.20.20.102
+      binds:
+        - intf-mapping.json:/mnt/flash/EosIntfMapping.json:ro
+    dc1-leaf1a:
+      kind: ceos
+      image: ceos:4.28.7M
+      mgmt-ipv4: 172.20.20.11
+      binds:
+        - intf-mapping.json:/mnt/flash/EosIntfMapping.json:ro
+    dc1-leaf1b:
+      kind: ceos
+      image: ceos:4.28.7M
+      mgmt-ipv4: 172.20.20.12
+      binds:
+        - intf-mapping.json:/mnt/flash/EosIntfMapping.json:ro
+    dc1-leaf2a:
+      kind: ceos
+      image: ceos:4.28.7M
+      mgmt-ipv4: 172.20.20.21
+      binds:
+        - intf-mapping.json:/mnt/flash/EosIntfMapping.json:ro
+    dc1-leaf2b:
+      kind: ceos
+      image: ceos:4.28.7M
+      mgmt-ipv4: 172.20.20.22
+      binds:
+        - intf-mapping.json:/mnt/flash/EosIntfMapping.json:ro
+    dc1-leaf1c:
+      kind: ceos
+      image: ceos:4.28.7M
+      mgmt-ipv4: 172.20.20.13
+      binds:
+        - intf-mapping.json:/mnt/flash/EosIntfMapping.json:ro      
+    dc1-leaf2c:
+      kind: ceos
+      image: ceos:4.28.7M
+      mgmt-ipv4: 172.20.20.23
+      binds:
+        - intf-mapping.json:/mnt/flash/EosIntfMapping.json:ro
+
+  links:
+    - endpoints: ["dc1-leaf1a:eth1","dc1-spine1:eth1"]
+    - endpoints: ["dc1-leaf1a:eth2","dc1-spine2:eth1"]
+    - endpoints: ["dc1-leaf1a:eth3","dc1-leaf1b:eth3"]
+    - endpoints: ["dc1-leaf1a:eth4","dc1-leaf1b:eth4"]
+    - endpoints: ["dc1-leaf1a:eth8","dc1-leaf1c:eth1"]
+    - endpoints: ["dc1-leaf1b:eth1","dc1-spine1:eth2"]
+    - endpoints: ["dc1-leaf1b:eth2","dc1-spine2:eth2"]
+    - endpoints: ["dc1-leaf1b:eth8","dc1-leaf1c:eth2"]
+    - endpoints: ["dc1-leaf2a:eth1","dc1-spine1:eth3"]
+    - endpoints: ["dc1-leaf2a:eth2","dc1-spine2:eth3"]
+    - endpoints: ["dc1-leaf2a:eth3","dc1-leaf2b:eth3"]
+    - endpoints: ["dc1-leaf2a:eth4","dc1-leaf2b:eth4"]
+    - endpoints: ["dc1-leaf2a:eth8","dc1-leaf2c:eth1"]
+    - endpoints: ["dc1-leaf2b:eth1","dc1-spine1:eth4"]
+    - endpoints: ["dc1-leaf2b:eth2","dc1-spine2:eth4"]

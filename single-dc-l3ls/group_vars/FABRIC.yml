@@ -73,7 +73,7 @@ terminattr_disable_aaa: true
 
 # DNS Server
 name_servers:
-  - 192.168.1.1
+  - 8.8.8.8
 
 # NTP Servers IP or DNS name, first NTP server will be prefered, and sourced from Management VRF
 custom_structured_configuration_ntp:

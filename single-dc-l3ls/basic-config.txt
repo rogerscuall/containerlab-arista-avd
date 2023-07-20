@@ -11,9 +11,6 @@ username ansible privilege 15 role network-admin secret sha512 $6$7u4j1rkb3VELgc
 management api http-commands
    protocol https
    no shutdown
-   !
-   vrf MGMT
-      no shutdown
 !
 end
 !

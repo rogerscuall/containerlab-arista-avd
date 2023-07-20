@@ -4,6 +4,9 @@
   gather_facts: false
   connection: local
   tasks:
+    - name: Gather CVP facts {{inventory_hostname}}
+      arista.cvp.cv_facts_v3:
+      register: cv_facts
 
     - name: Deploy Configurations to CloudVision # (2)!
       ansible.builtin.import_role:

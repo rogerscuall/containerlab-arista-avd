@@ -20,10 +20,6 @@ cvp_devices:
     parentContainerName: DC1_L3_LEAVES
     configlets:
       - AVD-FABRIC-_dc1-leaf2b
-  - fqdn: dc1-leaf2c
-    parentContainerName: DC1_L2_LEAVES
-    configlets:
-      - AVD-FABRIC-_dc1-leaf2c
   - fqdn: dc1-spine1
     parentContainerName: DC1_SPINES
     configlets:

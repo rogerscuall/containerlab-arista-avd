@@ -6,10 +6,8 @@ all:
         cvp:
           # Ansible variables used by the ansible_avd and ansible_cvp roles to push configuration to devices via CVP
           ansible_host: www.arista.io
-          ansible_user: svc_account
+          ansible_user: cvaas
           ansible_password: "{{ lookup('env', 'CVP_TOKEN')}}"
-          ansible_httpapi_port: 443
-          ansible_httpapi_host: apiserver.arista.io
           ansible_connection: httpapi
           ansible_httpapi_use_ssl: True
           ansible_httpapi_validate_certs: False

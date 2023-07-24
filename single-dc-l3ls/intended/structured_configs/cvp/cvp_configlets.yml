@@ -5,8 +5,8 @@ cvp_configlets:
     -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs\n   no shutdown\n!\nvlan
     internal order ascending range 1006 1199\n!\ntransceiver qsfp default-mode 4x10G\n!\nservice
     routing protocols model multi-agent\n!\nhostname dc1-leaf1a\nip name-server vrf
-    MGMT 192.168.1.1\n!\nntp local-interface vrf MGMT Management1\nntp server vrf
-    MGMT 0.pool.ntp.org\n!\nspanning-tree mode mstp\nno spanning-tree vlan-id 4093-4094\nspanning-tree
+    MGMT 8.8.8.8\n!\nntp local-interface vrf MGMT Management1\nntp server vrf MGMT
+    0.pool.ntp.org\n!\nspanning-tree mode mstp\nno spanning-tree vlan-id 4093-4094\nspanning-tree
     mst 0 priority 4096\n!\nno enable password\nno aaa root\n!\nusername admin privilege
     15 role network-admin nopassword\nusername ansible privilege 15 role network-admin
     secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvlan
@@ -116,8 +116,8 @@ cvp_configlets:
     -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs\n   no shutdown\n!\nvlan
     internal order ascending range 1006 1199\n!\ntransceiver qsfp default-mode 4x10G\n!\nservice
     routing protocols model multi-agent\n!\nhostname dc1-leaf1b\nip name-server vrf
-    MGMT 192.168.1.1\n!\nntp local-interface vrf MGMT Management1\nntp server vrf
-    MGMT 0.pool.ntp.org\n!\nspanning-tree mode mstp\nno spanning-tree vlan-id 4093-4094\nspanning-tree
+    MGMT 8.8.8.8\n!\nntp local-interface vrf MGMT Management1\nntp server vrf MGMT
+    0.pool.ntp.org\n!\nspanning-tree mode mstp\nno spanning-tree vlan-id 4093-4094\nspanning-tree
     mst 0 priority 4096\n!\nno enable password\nno aaa root\n!\nusername admin privilege
     15 role network-admin nopassword\nusername ansible privilege 15 role network-admin
     secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvlan
@@ -227,11 +227,10 @@ cvp_configlets:
     -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs\n   no shutdown\n!\nvlan
     internal order ascending range 1006 1199\n!\ntransceiver qsfp default-mode 4x10G\n!\nservice
     routing protocols model multi-agent\n!\nhostname dc1-leaf1c\nip name-server vrf
-    MGMT 192.168.1.1\n!\nntp local-interface vrf MGMT Management1\nntp server vrf
-    MGMT 0.pool.ntp.org\n!\nspanning-tree mode mstp\nspanning-tree mst 0 priority
-    32768\n!\nno enable password\nno aaa root\n!\nusername admin privilege 15 role
-    network-admin nopassword\nusername ansible privilege 15 role network-admin secret
-    sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvlan
+    MGMT 8.8.8.8\n!\nntp local-interface vrf MGMT Management1\nntp server vrf MGMT
+    0.pool.ntp.org\n!\nspanning-tree mode mstp\nspanning-tree mst 0 priority 32768\n!\nno
+    enable password\nno aaa root\n!\nusername admin privilege 15 role network-admin
+    nopassword\nusername ansible privilege 15 role network-admin secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvlan
     11\n   name VRF10_VLAN11\n!\nvlan 12\n   name VRF10_VLAN12\n!\nvlan 21\n   name
     VRF11_VLAN21\n!\nvlan 22\n   name VRF11_VLAN22\n!\nvlan 3401\n   name L2_VLAN3401\n!\nvlan
     3402\n   name L2_VLAN3402\n!\nvrf instance MGMT\n!\ninterface Port-Channel1\n
@@ -252,8 +251,8 @@ cvp_configlets:
     -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs\n   no shutdown\n!\nvlan
     internal order ascending range 1006 1199\n!\ntransceiver qsfp default-mode 4x10G\n!\nservice
     routing protocols model multi-agent\n!\nhostname dc1-leaf2a\nip name-server vrf
-    MGMT 192.168.1.1\n!\nntp local-interface vrf MGMT Management1\nntp server vrf
-    MGMT 0.pool.ntp.org\n!\nspanning-tree mode mstp\nno spanning-tree vlan-id 4093-4094\nspanning-tree
+    MGMT 8.8.8.8\n!\nntp local-interface vrf MGMT Management1\nntp server vrf MGMT
+    0.pool.ntp.org\n!\nspanning-tree mode mstp\nno spanning-tree vlan-id 4093-4094\nspanning-tree
     mst 0 priority 4096\n!\nno enable password\nno aaa root\n!\nusername admin privilege
     15 role network-admin nopassword\nusername ansible privilege 15 role network-admin
     secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvlan
@@ -363,8 +362,8 @@ cvp_configlets:
     -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs\n   no shutdown\n!\nvlan
     internal order ascending range 1006 1199\n!\ntransceiver qsfp default-mode 4x10G\n!\nservice
     routing protocols model multi-agent\n!\nhostname dc1-leaf2b\nip name-server vrf
-    MGMT 192.168.1.1\n!\nntp local-interface vrf MGMT Management1\nntp server vrf
-    MGMT 0.pool.ntp.org\n!\nspanning-tree mode mstp\nno spanning-tree vlan-id 4093-4094\nspanning-tree
+    MGMT 8.8.8.8\n!\nntp local-interface vrf MGMT Management1\nntp server vrf MGMT
+    0.pool.ntp.org\n!\nspanning-tree mode mstp\nno spanning-tree vlan-id 4093-4094\nspanning-tree
     mst 0 priority 4096\n!\nno enable password\nno aaa root\n!\nusername admin privilege
     15 role network-admin nopassword\nusername ansible privilege 15 role network-admin
     secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvlan
@@ -474,11 +473,10 @@ cvp_configlets:
     -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs\n   no shutdown\n!\nvlan
     internal order ascending range 1006 1199\n!\ntransceiver qsfp default-mode 4x10G\n!\nservice
     routing protocols model multi-agent\n!\nhostname dc1-leaf2c\nip name-server vrf
-    MGMT 192.168.1.1\n!\nntp local-interface vrf MGMT Management1\nntp server vrf
-    MGMT 0.pool.ntp.org\n!\nspanning-tree mode mstp\nspanning-tree mst 0 priority
-    32768\n!\nno enable password\nno aaa root\n!\nusername admin privilege 15 role
-    network-admin nopassword\nusername ansible privilege 15 role network-admin secret
-    sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvlan
+    MGMT 8.8.8.8\n!\nntp local-interface vrf MGMT Management1\nntp server vrf MGMT
+    0.pool.ntp.org\n!\nspanning-tree mode mstp\nspanning-tree mst 0 priority 32768\n!\nno
+    enable password\nno aaa root\n!\nusername admin privilege 15 role network-admin
+    nopassword\nusername ansible privilege 15 role network-admin secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvlan
     11\n   name VRF10_VLAN11\n!\nvlan 12\n   name VRF10_VLAN12\n!\nvlan 21\n   name
     VRF11_VLAN21\n!\nvlan 22\n   name VRF11_VLAN22\n!\nvlan 3401\n   name L2_VLAN3401\n!\nvlan
     3402\n   name L2_VLAN3402\n!\nvrf instance MGMT\n!\ninterface Port-Channel1\n
@@ -499,10 +497,10 @@ cvp_configlets:
     -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs\n   no shutdown\n!\nvlan
     internal order ascending range 1006 1199\n!\ntransceiver qsfp default-mode 4x10G\n!\nservice
     routing protocols model multi-agent\n!\nhostname dc1-spine1\nip name-server vrf
-    MGMT 192.168.1.1\n!\nntp local-interface vrf MGMT Management1\nntp server vrf
-    MGMT 0.pool.ntp.org\n!\nspanning-tree mode none\n!\nno enable password\nno aaa
-    root\n!\nusername admin privilege 15 role network-admin nopassword\nusername ansible
-    privilege 15 role network-admin secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvrf
+    MGMT 8.8.8.8\n!\nntp local-interface vrf MGMT Management1\nntp server vrf MGMT
+    0.pool.ntp.org\n!\nspanning-tree mode none\n!\nno enable password\nno aaa root\n!\nusername
+    admin privilege 15 role network-admin nopassword\nusername ansible privilege 15
+    role network-admin secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvrf
     instance MGMT\n!\ninterface Ethernet1\n   description P2P_LINK_TO_DC1-LEAF1A_Ethernet1\n
     \  no shutdown\n   mtu 1500\n   no switchport\n   ip address 10.255.255.0/31\n!\ninterface
     Ethernet2\n   description P2P_LINK_TO_DC1-LEAF1B_Ethernet1\n   no shutdown\n   mtu
@@ -550,10 +548,10 @@ cvp_configlets:
     -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs\n   no shutdown\n!\nvlan
     internal order ascending range 1006 1199\n!\ntransceiver qsfp default-mode 4x10G\n!\nservice
     routing protocols model multi-agent\n!\nhostname dc1-spine2\nip name-server vrf
-    MGMT 192.168.1.1\n!\nntp local-interface vrf MGMT Management1\nntp server vrf
-    MGMT 0.pool.ntp.org\n!\nspanning-tree mode none\n!\nno enable password\nno aaa
-    root\n!\nusername admin privilege 15 role network-admin nopassword\nusername ansible
-    privilege 15 role network-admin secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvrf
+    MGMT 8.8.8.8\n!\nntp local-interface vrf MGMT Management1\nntp server vrf MGMT
+    0.pool.ntp.org\n!\nspanning-tree mode none\n!\nno enable password\nno aaa root\n!\nusername
+    admin privilege 15 role network-admin nopassword\nusername ansible privilege 15
+    role network-admin secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920\n!\nvrf
     instance MGMT\n!\ninterface Ethernet1\n   description P2P_LINK_TO_DC1-LEAF1A_Ethernet2\n
     \  no shutdown\n   mtu 1500\n   no switchport\n   ip address 10.255.255.2/31\n!\ninterface
     Ethernet2\n   description P2P_LINK_TO_DC1-LEAF1B_Ethernet2\n   no shutdown\n   mtu
@@ -602,7 +600,6 @@ cvp_topology:
   DC1_L2_LEAVES:
     devices:
     - dc1-leaf1c
-    - dc1-leaf2c
     parent_container: DC1
   DC1_L3_LEAVES:
     devices:

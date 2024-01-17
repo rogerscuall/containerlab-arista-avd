@@ -3,6 +3,7 @@
 !
 ! Hostname of the device
 hostname dc1-leaf1a
+ip name-server vrf default 8.8.8.8
 !
 ! Configures username and password for the ansible user
 username ansible privilege 15 role network-admin secret sha512 $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920
@@ -12,6 +13,7 @@ management api http-commands
    protocol https
    no shutdown
 !
+ip route 0.0.0.0/0 172.20.20.1
 end
 !
 ! Save configuration to flash

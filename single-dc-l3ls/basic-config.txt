@@ -21,4 +21,3 @@ management api http-commands
 ip route 0.0.0.0/0 172.20.20.1
 end
 !
-end
